@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url('images/pattern-bg.svg') no-repeat, url('images/pattern-curve.svg') no-repeat, url('images/pattern-quotes.svg') no-repeat, white;
+  background-position: 90% 45%, 0% 100%, 20% 36%, 0% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container .slide-1 {
+  width: 1115px;
+  height: 540px;
+  position: absolute;
+}
+
+.container .slide-2 {
+  width: 1115px;
+  height: 540px;
+  position: absolute;
+  display: none;
+}
+
+.container .slide-1 .text,
+.container .slide-2 .text {
+  position: absolute;
+  width: 633px;
+  height: auto;
+  top: 170px;
+  left: 0;
+  z-index: 2;
+}
+
+.container .slide-1 .text .top,
+.container .slide-2 .text .top {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  color: var(--dark-blue);
+}
+
+.container .slide-1 .text .bottom p,
+.container .slide-2 .text .bottom p {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.container .slide-1 .text .bottom p span,
+.container .slide-2 .text .bottom p span {
+  color: var(--grayish-blue);
+  margin-left: 7px;
+}
+
+.container .slide-1 .text .bottom .mobile-work,
+.container .slide-2 .text .bottom .mobile-work {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grayish-blue);
+  margin-left: 7px;
+  display: none;
+}
+
+.container .slide-1 .img,
+.container .slide-2 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 540px;
+  height: 540px;
+  background: url('images/image-tanya.jpg') no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container .slide-2 .img {
+  background: url('images/image-john.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
+.container .buttons {
+  position: absolute;
+  bottom: 100px;
+  right: 38%;
+  width: 115px;
+  height: 60px;
+  z-index: 2;
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container .buttons .previous-button {
+  width: 50%;
+  height: 100%;
+  background: url('images/icon-prev.svg') no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+  box-shadow: 2px 82px 175px -19px rgba(0, 0, 0, 1);
+}
+
+.container .buttons .next-button {
+  width: 50%;
+  height: 100%;
+  background: url('images/icon-next.svg') no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1120px) {
+  .container {
+    width: 100%;
+    height: 667px;
+    background: url('images/pattern-bg.svg') no-repeat, url('images/pattern-curve.svg') no-repeat, url('images/pattern-quotes.svg') no-repeat, white;
+    background-size: 300px, 264px, 63px, 100%;
+    background-position: 50% 25px, 0% 100%, 50% 58%, 0% 0%;
+  }
+
+  .container .slide-1 {
+    width: 375px;
+    height: 667px;
+  }
+
+  .container .slide-2 {
+    width: 375px;
+    height: 667px;
+    transform: translateX(0%);
+  }
+
+  .container .slide-1 .text,
+  .container .slide-2 .text {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 390px;
+    left: 0;
+    z-index: 2;
+    padding: 0px 30px;
+  }
+
+  .container .slide-1 .text .top,
+  .container .slide-2 .text .top {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: var(--dark-blue);
+  }
+
+  .container .slide-1 .text .bottom p,
+  .container .slide-2 .text .bottom p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-blue);
+  }
+
+  .container .slide-1 .text .bottom p span,
+  .container .slide-2 .text .bottom p span {
+    display: none;
+  }
+
+  .container .slide-1 .text .bottom .mobile-work,
+  .container .slide-2 .text .bottom .mobile-work {
+    display: block;
+  }
+
+  .container .slide-1 .img,
+  .container .slide-2 .img {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: url('images/image-tanya.jpg') no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .container .slide-2 .img {
+    background: url('images/image-john.jpg') no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .container .buttons {
+    position: absolute;
+    bottom: 100px;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    z-index: 2;
+    display: flex;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .container .buttons .previous-button {
+    width: 50%;
+    height: 100%;
+    background: url('images/icon-prev.svg') no-repeat;
+    background-size: 28%;
+    background-position: 50% 50%;
+    cursor: pointer;
+    box-shadow: 2px 82px 175px -19px rgba(0, 0, 0, 1);
+  }
+
+  .container .buttons .next-button {
+    width: 50%;
+    height: 100%;
+    background: url('images/icon-next.svg') no-repeat;
+    background-size: 30%;
+    background-position: 50% 50%;
+    cursor: pointer;
+  }
+
+
+
+
+}
